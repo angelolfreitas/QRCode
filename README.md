@@ -30,11 +30,10 @@ docker run --env-file .env -p 8080:8080 angelofr/qrcode-gen:3.1
 Isso vai executar a docker image no meu perfil do docker hub, passando como argumento o .env que você criou e associa a porta local do container à sua.
 Pronto, o container foi criado a partir da docker image e estará em execução até que você interrompa.
 Você pode testar com o insomnia ou alguma aplicação semelhante. Basta mandar uma requisição de post nesse formato:
-```bash
-{
-	"text":"teu-link"
-}
-```
+<img width="729" height="206" alt="image" src="https://github.com/user-attachments/assets/a26a6f9d-a2d6-4e7a-a455-d0a28fd8ed3e" />
+
+O link vai te redirecionar para o valor associado à chave gerada pela aplicação, que é guardado no AWS e está em formato PNG. Você não é obrigado a encriptar links, pode ser qualquer tipo de texto mesmo.
+
 
 ## 1.2: Você quer mexer no código fonte
 Instale o repositório, manipule o que quiser. Para executar, prossiga dessa forma:
