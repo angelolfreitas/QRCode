@@ -1,7 +1,7 @@
 # Gerador de QRCode
 Esse projeto foi feito para exercitar conceitos de REST a partir do framework SpringBoot.
 O projeto utiliza do recurso AWS para armazenar os posts da aplicação e permitir o acesso dos objetos gerados pelas requisições HTTP.
-Utilizei inicialmente o JDK 25, existiam algumas dependências mais antigas que impediam a execução do programa (então, rebaixei para 22).
+Utilizei inicialmente o JDK 25, mas existiam algumas dependências mais antigas que impediam a execução do programa (então, rebaixei para 22).
 
 Utilizei docker para garantir a execução do programa em qualquer outra máquina e maven para gestão de dependências, e testei as requisições com o
 insomnia.
