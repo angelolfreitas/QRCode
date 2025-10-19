@@ -1,4 +1,4 @@
-## Gerador de QRCode
+# Gerador de QRCode
 Esse projeto foi feito para exercitar conceitos de REST a partir do framework SpringBoot.
 O projeto utiliza do recurso AWS para armazenar os posts da aplicação e permitir o acesso dos objetos gerados pelas requisições HTTP.
 Utilizei inicialmente o JDK 25, existiam algumas dependências mais antigas que impediam a execução do programa (então, rebaixei para 22).
@@ -9,9 +9,11 @@ insomnia.
 O código fonte está totalmente documentado. Anotei outras coisas sobre conceitos de REST e RESTfull e outras técnicas em uma página do notion (acesse por esse
 link: https://www.notion.so/SpringBoot-HTTP-290aafd3bbb78062a29bd25c797e8582?source=copy_link).
 
-# 1. Como executar a aplicação
-# 1.1 Passos:
-Crie um arquivo .env com suas credenciais do aws:
+## 1. Como executar a aplicação
+Para compilação e execução da aplicação, recorri ao Docker para garantir a execução bem sucedida em qualquer máquina. Possíveis problemas na compilação
+devem ser associados às definições relacionadas ao AWS.
+### 1.1 Passos:
+Crie um arquivo .env com suas credenciais do AWS:
 ```bash
 AWS_ACCESS_KEY_ID=123...
 AWS_SECRET_ACCESS_KEY=456...
@@ -28,7 +30,7 @@ docker build -t nome-da-docker-image:versão .
 ```bash
 docker run --env-file .env -p 8080:8080 nome-da-docker-image:versão
 ```
-# 1.2 Explicação:
+### 1.2 Explicação:
 Você precisa passar como argumento as suas credenciais do amazon AWS. Para isso, você só precisa criar um arquivo .env com o seguinte formato:
 ```bash
 AWS_ACCESS_KEY_ID=123...
@@ -37,7 +39,7 @@ AWS_SECRET_ACCESS_KEY=456...
 Troque esses valores pela access key e pela secret do seu usuário do AWS (você deve achar na seção IAM do console do AWS).
 Eles vão ser requeridos pelo sistema do AWS para postar e recuperar os objetos (não são variáveis da aplicação).
 
-Por fim, você precisa ter criado um bucket no client S3 do aws. Esse bucket precisa ter uma política que permita o post e o get de objetos no servidor.
+Por fim, você precisa ter criado um bucket no client S3 do AWS. Esse bucket precisa ter uma política que permita o post e o get de objetos no servidor.
 Crie esse bucket e, no arquivo (´Dockerfile`). troque os campos de region e bucket name pelos seus:
 ```bash
 ENV AWS_REGION=tua-regiao
