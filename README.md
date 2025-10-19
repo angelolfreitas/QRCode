@@ -18,7 +18,7 @@ Crie um arquivo .env com suas credenciais do AWS:
 AWS_ACCESS_KEY_ID=123...
 AWS_SECRET_ACCESS_KEY=456...
 ```
-Troque, no (´Dockerfile`), os campos de region e bucket name pelo bucket que você criou no S3:
+Troque, no (`Dockerfile`), os campos de region e bucket name pelo bucket que você criou no S3:
 ```bash
 ENV AWS_REGION=tua-regiao
 ENV AWS_BUCKET_NAME=nome-do-teu-bucket
@@ -40,7 +40,7 @@ Troque esses valores pela access key e pela secret do seu usuário do AWS (você
 Eles vão ser requeridos pelo sistema do AWS para postar e recuperar os objetos (não são variáveis da aplicação).
 
 Por fim, você precisa ter criado um bucket no client S3 do AWS. Esse bucket precisa ter uma política que permita o post e o get de objetos no servidor.
-Crie esse bucket e, no arquivo (´Dockerfile`). troque os campos de region e bucket name pelos seus:
+Crie esse bucket e, no arquivo (`Dockerfile`). troque os campos de region e bucket name pelos seus:
 ```bash
 ENV AWS_REGION=tua-regiao
 ENV AWS_BUCKET_NAME=nome-do-teu-bucket
