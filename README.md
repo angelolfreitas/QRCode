@@ -27,6 +27,7 @@ Depois, chame a docker image do meu perfil no dockerhub:
 ```bash
 docker run --env-file .env -p 8080:8080 angelofr/qrcode-gen:3.1 
 ```
+Isso vai executar a docker image no meu perfil do docker hub, passando como argumento o .env que você criou e associa a porta local do container à sua.
 Pronto, o container foi criado a partir da docker image e estará em execução até que você interrompa.
 Você pode testar com o insomnia ou alguma aplicação semelhante. Basta mandar uma requisição de post nesse formato:
 ```bash
