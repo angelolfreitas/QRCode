@@ -9,7 +9,7 @@ insomnia.
 O código fonte está totalmente documentado. Anotei outras coisas sobre conceitos de REST e RESTfull e outras técnicas em uma página do notion (acesse por esse
 link: https://www.notion.so/SpringBoot-HTTP-290aafd3bbb78062a29bd25c797e8582?source=copy_link).
 
-# 1. Como executar a aplicação
+# 1: Como executar a aplicação
 Para compilação e execução da aplicação, recorri ao Docker para garantir a execução bem sucedida em qualquer máquina. Possíveis problemas na compilação
 devem ser associados às definições relacionadas ao AWS.
 Você precisa do docker instalado para fazer os passos seguintes, e de um bucket no AWS.
@@ -38,7 +38,7 @@ Você pode testar com o insomnia ou alguma aplicação semelhante. Basta mandar 
 ## 1.2: Você quer mexer no código fonte
 Instale o repositório, manipule o que quiser. Para executar, prossiga dessa forma:
 
-### 1.2.1 Passos:
+### 1.2.1: Passos
 Crie um arquivo .env com suas credenciais do AWS:
 ```bash
 AWS_ACCESS_KEY_ID=123...
@@ -54,7 +54,7 @@ E depois execute por um container:
 ```bash
 docker run --env-file .env -p 8080:8080 nome-da-docker-image:versão
 ```
-### 1.2.2 Explicação:
+### 1.2.2: Explicação
 Você precisa passar como argumento as suas credenciais do amazon AWS. Para isso, você só precisa criar um arquivo .env com o seguinte formato:
 ```bash
 AWS_ACCESS_KEY_ID=123...
@@ -90,6 +90,6 @@ docker ps
 Deve aparecer as informações da docker image que você gerou.
 Agora, você pode testar as requisições com alguma aplicação como o insomnia.
 
-## 2. Avisos
+## 2: Avisos
 Caso você coloque isso em um repositório, adicione o .env ao .gitignore para que suas credenciais do AWS não sejam expostas.
 
