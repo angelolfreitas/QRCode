@@ -12,6 +12,7 @@ link: https://www.notion.so/SpringBoot-HTTP-290aafd3bbb78062a29bd25c797e8582?sou
 ## 1. Como executar a aplicação
 Para compilação e execução da aplicação, recorri ao Docker para garantir a execução bem sucedida em qualquer máquina. Possíveis problemas na compilação
 devem ser associados às definições relacionadas ao AWS.
+Você precisa do docker instalado para fazer os passos seguintes, e de um bucket no AWS.
 ### 1.1 Passos:
 Crie um arquivo .env com suas credenciais do AWS:
 ```bash
