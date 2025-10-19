@@ -13,6 +13,7 @@ link: https://www.notion.so/SpringBoot-HTTP-290aafd3bbb78062a29bd25c797e8582?sou
 Para compilação e execução da aplicação, recorri ao Docker para garantir a execução bem sucedida em qualquer máquina. Possíveis problemas na compilação
 devem ser associados às definições relacionadas ao AWS.
 Você precisa do docker instalado para fazer os passos seguintes, e de um bucket no AWS.
+Abaixo, os passos que você deve seguir para executar ou modificar a aplicação:
 ## 1.1: Você só quer executar
 Você pode executar essa aplicação pelo hub do docker sem precisar deste repositório.
 Basta criar um bucket no aws, das suas credenciais e de um arquivo .env com essas variáveis de ambiente:
@@ -28,7 +29,7 @@ docker run --env-file .env -p 8080:8080 angelofr/qrcode-gen:3.1
 ```
 Pronto, o container foi criado a partir da docker image e estará em execução até que você interrompa.
 Você pode testar com o insomnia ou alguma aplicação semelhante. Basta mandar uma requisição de post nesse formato:
-``bash
+```bash
 {
 	"text":"teu-link"
 }
